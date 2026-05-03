@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rhm"
+version = "0.1.0"
+description = "Roy Hybrid Model: a unified mechanochemical framework for protein molecular motors"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [
+    { name = "Kushal Raj Roy", email = "kushalrajroy1@gmail.com" }
+]
+keywords = [
+    "molecular motors",
+    "biophysics",
+    "stochastic thermodynamics",
+    "Langevin dynamics",
+    "Brownian ratchet",
+    "power stroke",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Physics",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
+dependencies = [
+    "numpy>=1.20",
+]
+
+[project.optional-dependencies]
+examples = ["matplotlib>=3.5"]
+dev = ["pytest>=7.0", "matplotlib>=3.5"]
+
+[project.urls]
+Homepage = "https://github.com/kroy3/roy-hybrid-model"
+Repository = "https://github.com/kroy3/roy-hybrid-model"
+
+[tool.setuptools.packages.find]
+include = ["rhm*"]
+exclude = ["tests*", "examples*"]
